@@ -5,7 +5,7 @@
 
 ---
 
-[Version Ingles][(https://github.com/danielcordobap/cuesta_partners_eng)
+[Version Ingles](https://github.com/danielcordobap/cuesta_partners_eng)
 
 ## 📌 1. Descripción del Proyecto
 
