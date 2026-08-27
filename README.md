@@ -5,6 +5,8 @@
 
 ---
 
+(Version Ingles)[https://github.com/danielcordobap/cuesta_partners_eng]
+
 ## 📌 1. Descripción del Proyecto
 
 Este repositorio contiene la solución técnica y estratégica desarrollada para la prueba de ingreso a **Cuesta Partners**, enfocada en el caso de negocio de la agencia inmobiliaria **Clearview Properties** en Cedar Falls, Iowa.
