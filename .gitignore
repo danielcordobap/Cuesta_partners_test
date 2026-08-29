@@ -11,3 +11,9 @@ venv/
 # Logs y Temporales
 *.log
 scratch/
+
+Data.csv
+Data_Dictionary.txt
+
+Data.csv
+Data_Dictionary.txt

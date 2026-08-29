@@ -1,0 +1,488 @@
+HOUSING DATASET — DATA DICTIONARY
+========================================================================
+
+Records in this file: approximately 2,960 individual property sales in
+Cedar Falls, Iowa, covering the period 2006-2010.
+
+Every code listed below is GUARANTEED to appear in Data.csv. Where the
+dataset uses an extended code (e.g. "A (agr)" instead of "A"), this
+dictionary uses the form that actually appears in the file.
+
+------------------------------------------------------------------------
+IDENTIFIERS
+------------------------------------------------------------------------
+Order                Sequential identifier of the row (not a property ID).
+PID                  Parcel Identification Number from the city tax records.
+                     Uniquely identifies a property.
+
+------------------------------------------------------------------------
+PROPERTY CLASSIFICATION
+------------------------------------------------------------------------
+MS SubClass          Type of dwelling involved in the sale (integer code):
+                       120      1-STORY PUD 1946 & NEWER
+                       150      1-1/2 STORY PUD ALL AGES
+                       160      2-STORY PUD 1946 & NEWER
+                       180      PUD MULTILEVEL - INCL SPLIT LEV/FOYER
+                       190      2 FAMILY CONVERSION ALL STYLES AND AGES
+                       20       1-STORY 1946 & NEWER ALL STYLES
+                       30       1-STORY 1945 & OLDER
+                       40       1-STORY W/FINISHED ATTIC ALL AGES
+                       45       1-1/2 STORY UNFINISHED ALL AGES
+                       50       1-1/2 STORY FINISHED ALL AGES
+                       60       2-STORY 1946 & NEWER
+                       70       2-STORY 1945 & OLDER
+                       75       2-1/2 STORY ALL AGES
+                       80       SPLIT OR MULTI-LEVEL
+                       85       SPLIT FOYER
+                       90       DUPLEX - ALL STYLES AND AGES
+
+MS Zoning            General zoning classification of the sale:
+                       A (agr)  Agriculture
+                       C (all)  Commercial
+                       FV       Floating Village Residential
+                       I (all)  Industrial
+                       RH       Residential High Density
+                       RL       Residential Low Density
+                       RM       Residential Medium Density
+
+Bldg Type            Type of dwelling:
+                       1Fam     Single-family Detached
+                       2fmCon   Two-family Conversion (originally built as one-family)
+                       Duplex   Duplex
+                       Twnhs    Townhouse Inside Unit
+                       TwnhsE   Townhouse End Unit
+
+House Style          Style of dwelling:
+                       1.5Fin   One and one-half story: 2nd level finished
+                       1.5Unf   One and one-half story: 2nd level unfinished
+                       1Story   One story
+                       2.5Fin   Two and one-half story: 2nd level finished
+                       2.5Unf   Two and one-half story: 2nd level unfinished
+                       2Story   Two story
+                       SFoyer   Split Foyer
+                       SLvl     Split Level
+
+------------------------------------------------------------------------
+LOT AND LAND
+------------------------------------------------------------------------
+Lot Frontage         Linear feet of street connected to property (numeric).
+Lot Area             Lot size in square feet (numeric).
+
+Street               Type of road access to property:
+                       Grvl     Gravel
+                       Pave     Paved
+
+Alley                Type of alley access to property:
+                       Grvl     Gravel
+                       Pave     Paved
+                     NaN = no alley access
+
+Lot Shape            General shape of property:
+                       IR1      Slightly irregular
+                       IR2      Moderately irregular
+                       IR3      Irregular
+                       Reg      Regular
+
+Land Contour         Flatness of the property:
+                       Bnk      Banked (quick rise from street)
+                       HLS      Hillside (significant slope side to side)
+                       Low      Depression
+                       Lvl      Near Flat/Level
+
+Utilities            Type of utilities available:
+                       AllPub   All public utilities (E,G,W,S)
+                       NoSeWa   Electricity and Gas only
+                       NoSewr   Electricity, Gas, Water (septic tank)
+
+Lot Config           Lot configuration:
+                       Corner   Corner lot
+                       CulDSac  Cul-de-sac
+                       FR2      Frontage on 2 sides
+                       FR3      Frontage on 3 sides
+                       Inside   Inside lot
+
+Land Slope           Slope of property:
+                       Gtl      Gentle slope
+                       Mod      Moderate slope
+                       Sev      Severe slope
+
+Neighborhood         Physical location within city limits.
+                     28 possible values present in the data:
+                     Blmngtn, Blueste, BrDale, BrkSide, ClearCr, CollgCr, Crawfor, Edwards, Gilbert, Greens, GrnHill, IDOTRR, Landmrk, MeadowV, Mitchel, NAmes, NPkVill, NWAmes, NoRidge, NridgHt, OldTown, SWISU, Sawyer, SawyerW, Somerst, StoneBr, Timber, Veenker
+
+Condition 1          Proximity to various conditions (primary):
+                       Artery   Adjacent to arterial street
+                       Feedr    Adjacent to feeder street
+                       Norm     Normal
+                       PosA     Adjacent to positive off-site feature
+                       PosN     Near positive off-site feature
+                       RRAe     Adjacent to E-W Railroad
+                       RRAn     Adjacent to N-S Railroad
+                       RRNe     Within 200ft of E-W Railroad
+                       RRNn     Within 200ft of N-S Railroad
+
+Condition 2          Proximity to various conditions (secondary, when more than one is present):
+                       Artery   Adjacent to arterial street
+                       Feedr    Adjacent to feeder street
+                       Norm     Normal
+                       PosA     Adjacent to positive off-site feature
+                       PosN     Near positive off-site feature
+                       RRAe     Adjacent to E-W Railroad
+                       RRAn     Adjacent to N-S Railroad
+                       RRNn     Within 200ft of N-S Railroad
+
+------------------------------------------------------------------------
+OVERALL QUALITY AND CONDITION
+------------------------------------------------------------------------
+Overall Qual         Rates the overall material and finish of the house.
+                     Integer from 1 (Very Poor) to 10 (Very Excellent).
+
+Overall Cond         Rates the overall condition of the house.
+                     Integer from 1 (Very Poor) to 10 (Very Excellent).
+
+------------------------------------------------------------------------
+YEAR BUILT AND REMODEL
+------------------------------------------------------------------------
+Year Built           Original construction year.
+Year Remod/Add       Remodel year (same as Year Built if no remodel or addition).
+
+------------------------------------------------------------------------
+ROOF AND EXTERIOR
+------------------------------------------------------------------------
+Roof Style           Type of roof:
+                       Flat     Flat
+                       Gable    Gable
+                       Gambrel  Gambrel (Barn)
+                       Hip      Hip
+                       Mansard  Mansard
+                       Shed     Shed
+
+Roof Matl            Roof material:
+                       ClyTile  Clay or Tile
+                       CompShg  Standard (Composite) Shingle
+                       Membran  Membrane
+                       Metal    Metal
+                       Roll     Roll
+                       Tar&Grv  Gravel & Tar
+                       WdShake  Wood Shakes
+                       WdShngl  Wood Shingles
+
+Exterior 1st         Exterior covering on house (primary):
+                       AsbShng  Asbestos Shingles
+                       AsphShn  Asphalt Shingles
+                       BrkComm  Brick Common
+                       BrkFace  Brick Face
+                       CBlock   Cinder Block
+                       CemntBd  Cement Board
+                       HdBoard  Hard Board
+                       ImStucc  Imitation Stucco
+                       MetalSd  Metal Siding
+                       Plywood  Plywood
+                       PreCast  PreCast
+                       Stone    Stone
+                       Stucco   Stucco
+                       VinylSd  Vinyl Siding
+                       Wd Sdng  Wood Siding
+                       WdShing  Wood Shingles
+
+Exterior 2nd         Exterior covering on house (if more than one material is used):
+                       AsbShng  Asbestos Shingles
+                       AsphShn  Asphalt Shingles
+                       Brk Cmn  Brick Common
+                       BrkFace  Brick Face
+                       CBlock   Cinder Block
+                       CmentBd  Cement Board
+                       HdBoard  Hard Board
+                       ImStucc  Imitation Stucco
+                       MetalSd  Metal Siding
+                       Other    Other
+                       Plywood  Plywood
+                       PreCast  PreCast
+                       Stone    Stone
+                       Stucco   Stucco
+                       VinylSd  Vinyl Siding
+                       Wd Sdng  Wood Siding
+                       Wd Shng  Wood Shingles
+
+Mas Vnr Type         Masonry veneer type:
+                       BrkCmn   Brick Common
+                       BrkFace  Brick Face
+                       CBlock   Cinder Block
+                       Stone    Stone
+                     NaN = no masonry veneer
+
+Mas Vnr Area         Masonry veneer area in square feet (numeric).
+
+Exter Qual           Quality of the material on the exterior:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       TA       Average / Typical
+
+Exter Cond           Present condition of the material on the exterior:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+
+------------------------------------------------------------------------
+FOUNDATION AND BASEMENT
+------------------------------------------------------------------------
+Foundation           Type of foundation:
+                       BrkTil   Brick & Tile
+                       CBlock   Cinder Block
+                       PConc    Poured Concrete
+                       Slab     Slab
+                       Stone    Stone
+                       Wood     Wood
+
+Bsmt Qual            Height of the basement:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+                     NaN = no basement
+
+Bsmt Cond            General condition of the basement:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+                     NaN = no basement
+
+Bsmt Exposure        Walkout or garden level basement walls:
+                       Av       Average exposure
+                       Gd       Good exposure
+                       Mn       Minimum exposure
+                       No       No exposure
+                     NaN = no basement
+
+BsmtFin Type 1       Rating of basement finished area (primary):
+                       ALQ      Average Living Quarters
+                       BLQ      Below Average Living Quarters
+                       GLQ      Good Living Quarters
+                       LwQ      Low Quality
+                       Rec      Average Rec Room
+                       Unf      Unfinished
+                     NaN = no basement
+
+BsmtFin SF 1         Type 1 finished square feet (numeric).
+
+BsmtFin Type 2       Rating of basement finished area (secondary, if multiple types):
+                       ALQ      Average Living Quarters
+                       BLQ      Below Average Living Quarters
+                       GLQ      Good Living Quarters
+                       LwQ      Low Quality
+                       Rec      Average Rec Room
+                       Unf      Unfinished
+                     NaN = no basement
+
+BsmtFin SF 2         Type 2 finished square feet (numeric).
+
+Bsmt Unf SF          Unfinished square feet of basement area (numeric).
+Total Bsmt SF        Total square feet of basement area (numeric).
+
+------------------------------------------------------------------------
+HEATING AND ELECTRICAL
+------------------------------------------------------------------------
+Heating              Type of heating:
+                       Floor    Floor Furnace
+                       GasA     Gas forced warm air furnace
+                       GasW     Gas hot water or steam heat
+                       Grav     Gravity furnace
+                       OthW     Hot water or steam heat other than gas
+                       Wall     Wall furnace
+
+Heating QC           Heating quality and condition:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+
+Central Air          Central air conditioning:
+                       N        No
+                       Y        Yes
+
+Electrical           Electrical system:
+                       FuseA    Fuse Box over 60 AMP and all Romex (Average)
+                       FuseF    60 AMP Fuse Box and mostly Romex (Fair)
+                       FuseP    60 AMP Fuse Box and mostly knob & tube (Poor)
+                       Mix      Mixed
+                       SBrkr    Standard Circuit Breakers & Romex
+
+------------------------------------------------------------------------
+INTERIOR LIVING AREAS
+------------------------------------------------------------------------
+1st Flr SF           First floor square feet (numeric).
+2nd Flr SF           Second floor square feet (numeric).
+Low Qual Fin SF      Low quality finished square feet, all floors (numeric).
+Gr Liv Area          Above-grade (ground) living area square feet (numeric).
+
+Bsmt Full Bath       Basement full bathrooms (integer).
+Bsmt Half Bath       Basement half bathrooms (integer).
+Full Bath            Full bathrooms above grade (integer).
+Half Bath            Half bathrooms above grade (integer).
+Bedroom AbvGr        Bedrooms above grade — does not include basement (integer).
+Kitchen AbvGr        Kitchens above grade (integer).
+
+Kitchen Qual         Kitchen quality:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+
+TotRms AbvGrd        Total rooms above grade — does not include bathrooms (integer).
+
+Functional           Home functionality (assume typical unless deductions are warranted):
+                       Maj1     Major Deductions 1
+                       Maj2     Major Deductions 2
+                       Min1     Minor Deductions 1
+                       Min2     Minor Deductions 2
+                       Mod      Moderate Deductions
+                       Sal      Salvage only
+                       Sev      Severely Damaged
+                       Typ      Typical Functionality
+
+------------------------------------------------------------------------
+FIREPLACES
+------------------------------------------------------------------------
+Fireplaces           Number of fireplaces (integer).
+
+Fireplace Qu         Fireplace quality:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+                     NaN = no fireplace
+
+------------------------------------------------------------------------
+GARAGE
+------------------------------------------------------------------------
+Garage Type          Garage location:
+                       2Types   More than one type
+                       Attchd   Attached to home
+                       Basment  Basement Garage
+                       BuiltIn  Built-In (part of main house)
+                       CarPort  Car Port
+                       Detchd   Detached from home
+                     NaN = no garage
+
+Garage Yr Blt        Year garage was built (numeric).
+Garage Finish        Interior finish of the garage:
+                       Fin      Finished
+                       RFn      Rough Finished
+                       Unf      Unfinished
+                     NaN = no garage
+
+Garage Cars          Size of garage in car capacity (integer).
+Garage Area          Size of garage in square feet (numeric).
+Garage Qual          Garage quality:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+                     NaN = no garage
+
+Garage Cond          Garage condition:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       Po       Poor
+                       TA       Average / Typical
+                     NaN = no garage
+
+------------------------------------------------------------------------
+EXTERIOR AREAS
+------------------------------------------------------------------------
+Paved Drive          Paved driveway:
+                       N        Dirt/Gravel
+                       P        Partial pavement
+                       Y        Paved
+
+Wood Deck SF         Wood deck area in square feet (numeric).
+Open Porch SF        Open porch area in square feet (numeric).
+Enclosed Porch       Enclosed porch area in square feet (numeric).
+3Ssn Porch           Three season porch area in square feet (numeric).
+Screen Porch         Screen porch area in square feet (numeric).
+Pool Area            Pool area in square feet (numeric).
+
+Pool QC              Pool quality:
+                       Ex       Excellent
+                       Fa       Fair
+                       Gd       Good
+                       TA       Average / Typical
+                     NaN = no pool
+
+Fence                Fence quality:
+                       GdPrv    Good Privacy
+                       GdWo     Good Wood
+                       MnPrv    Minimum Privacy
+                       MnWw     Minimum Wood/Wire
+                     NaN = no fence
+
+Misc Feature         Miscellaneous feature not covered in other categories:
+                       Elev     Elevator
+                       Gar2     2nd Garage (if not described in garage section)
+                       Othr     Other
+                       Shed     Shed (over 100 SF)
+                       TenC     Tennis Court
+                     NaN = none
+
+Misc Val             Dollar value of the miscellaneous feature (numeric).
+
+------------------------------------------------------------------------
+SALE INFORMATION
+------------------------------------------------------------------------
+Mo Sold              Month of sale (integer 1 to 12).
+Yr Sold              Year of sale (integer).
+
+Sale Type            Type of sale:
+                       COD      Court Officer Deed/Estate
+                       CWD      Warranty Deed - Cash
+                       Con      Contract 15% Down payment regular terms
+                       ConLD    Contract Low Down
+                       ConLI    Contract Low Interest
+                       ConLw    Contract Low Down payment and low interest
+                       New      Home just constructed and sold
+                       Oth      Other
+                       VWD      Warranty Deed - VA Loan
+                       WD       (see paper)
+
+Sale Condition       Condition of sale:
+                       Abnorml  Abnormal Sale - trade, foreclosure, short sale
+                       AdjLand  Adjoining Land Purchase
+                       Alloca   Allocation (linked properties)
+                       Family   Sale between family members
+                       Normal   Normal Sale
+                       Partial  Home was not completed when last assessed (associated with New Homes)
+
+------------------------------------------------------------------------
+TARGET
+------------------------------------------------------------------------
+SalePrice            Sale price of the property in US dollars (numeric).
+
+========================================================================
+NOTES ON MISSING VALUES (NaN) IN THE ORIGINAL SOURCE
+========================================================================
+In the original dataset, NaN values in the following columns
+are NOT errors — they mean the feature genuinely does not exist for that
+property:
+
+  Pool QC        NaN = no pool
+  Misc Feature   NaN = no extra feature
+  Alley          NaN = no alley access
+  Fence          NaN = no fence
+  Fireplace Qu   NaN = no fireplace
+  Mas Vnr Type   NaN = no masonry veneer
+  Garage Type    NaN = no garage  (and the rest of Garage * columns)
+  Bsmt Qual      NaN = no basement  (and the rest of Bsmt * columns)
+
+NaN values in any other column may indicate a data quality issue worth
+investigating.
